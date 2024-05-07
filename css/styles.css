@@ -407,7 +407,7 @@ img {
 .footer-info {
   margin-right: 120px;
 }
-.footer-social{
+.footer-social {
   margin-right: 80px;
 }
 .footer-logo {
@@ -490,6 +490,10 @@ img {
   background-color: transparent;
   padding-left: 16px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .subscribe-form-submit {
   min-width: 165px;
@@ -505,12 +509,16 @@ img {
   color: rgba(255, 255, 255, 1);
   transition: color 250ms linear, background-color 250ms linear;
   margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.sub-icon-form{
+.sub-icon-form {
   position: absolute;
   top: 50%;
-  right: 24px;  
+  right: 24px;
   transform: translateY(-50%);
+  margin-left: 16px;
 }
 /* ============  BACKDROP  ============  */
 .backdrop {
@@ -520,9 +528,11 @@ img {
   z-index: 9999999;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(46, 47, 66, 0.4);
   opacity: 0;
   visibility: hidden;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-open {
   opacity: 1;
@@ -541,6 +551,9 @@ img {
   padding-right: 24px;
   padding-top: 72px;
   padding-bottom: 24px;
+  box-shadow: зі значенням 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn {
   position: absolute;
@@ -555,6 +568,17 @@ img {
   background-color: rgba(231, 233, 252, 1);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+  fill: #ffffff;
 }
 .modal-input-info {
   font-size: 16px;
@@ -563,6 +587,7 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   margin-bottom: 16px;
+  color: #2e2f42;
 }
 .review-form-field-wrapper {
   margin-bottom: 8px;
@@ -574,6 +599,8 @@ img {
   letter-spacing: 0.04em;
   text-align: left;
   color: rgba(142, 143, 153, 1);
+  display: block;
+  margin-bottom: 4px;
 }
 .review-form-input {
   width: 100%;
@@ -581,6 +608,9 @@ img {
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
 }
 .review-form-input:focus {
   border-color: rgba(77, 90, 229, 1);
@@ -595,11 +625,11 @@ img {
   left: 16px;
   transform: translateY(-50%);
   stroke: rgba(46, 47, 66, 1);
-  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .review-form-input:focus + .review-form-field-icon {
-  stroke: rgba(77, 90, 229, 1);
+  fill: #4d5ae5;
 }
 .review-form-message {
   width: 100%;
@@ -610,6 +640,11 @@ img {
   resize: none;
   padding: 8px 16px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  outline: transparent;
 }
 .review-form-message:focus {
   border-color: rgba(77, 90, 229, 1);
@@ -621,6 +656,7 @@ img {
   line-height: 1.17;
   letter-spacing: 0.04em;
   text-align: left;
+  columns: #8e8f99;
 }
 .review-form-checkbox-wrapper {
   margin-bottom: 24px;
@@ -636,6 +672,9 @@ img {
   cursor: pointer;
   fill: transparent;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .review-form-checkbox:checked
   + .review-form-checkbox-label
@@ -647,7 +686,7 @@ img {
 .review-form-submit {
   min-width: 169px;
   height: 56px;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -659,4 +698,16 @@ img {
   border-radius: 4px;
   margin: 0 auto;
   display: block;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.review-form-field-wrapper:nth-child(4) {
+  margin-bottom: 16px;
+}
+.review-form-checkbox:checked + .review-form-checkbox-label .review-form-own-checkbox {
+  background-color: #404bbf;;
+  border: none;
+  fill: #F4F4FD;
+}
+.privacy-policy-link{
+  color: #4d5ae5;
 }
