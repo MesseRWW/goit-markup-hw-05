@@ -514,10 +514,6 @@ img {
   align-items: center;
 }
 .sub-icon-form {
-  position: absolute;
-  top: 50%;
-  right: 24px;
-  transform: translateY(-50%);
   margin-left: 16px;
 }
 /* ============  BACKDROP  ============  */
@@ -627,7 +623,7 @@ img {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-  stroke: rgba(46, 47, 66, 1);
+  /* stroke: rgba(46, 47, 66, 1); */
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
